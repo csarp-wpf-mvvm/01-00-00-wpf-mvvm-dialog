@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using StudentMVVMProjekt.Models;
+using System.Windows.Documents;
 
 namespace StudentMVVMProjekt.ViewModels
 {
@@ -10,6 +11,9 @@ namespace StudentMVVMProjekt.ViewModels
 
         [ObservableProperty]
         private string selectedEducationLevel;
+
+        [ObservableProperty]
+        private List<string> educationLevel=Student.AllEducationLevel;
 
         public StudentViewModel()
         {

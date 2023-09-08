@@ -30,7 +30,7 @@ namespace StudentMVVMProjekt.Models
             EducationLevel = AllEducationLevel;
         }
 
-        public readonly List<string> AllEducationLevel = new List<string> { "érettségi", "szakmai érettségi", "szakmai vizsga" };
+        public static List<string> AllEducationLevel = new List<string> { "érettségi", "szakmai érettségi", "szakmai vizsga" };
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
