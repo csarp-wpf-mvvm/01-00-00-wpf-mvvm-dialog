@@ -5,6 +5,9 @@ using System.Collections.Generic;
 namespace StudentMVVMProjekt.Models
 {
     public enum SchoolClassType { CLASS_A, CLASS_B, CLASS_C }
+
+
+
     public class Student
     {
         public Student()
@@ -12,25 +15,27 @@ namespace StudentMVVMProjekt.Models
             FirstName = string.Empty;
             LastName = string.Empty;
             BirthsDay = new DateTime();
-            Year = 9;
+            SchoolYear = 9;
             SchoolClass = SchoolClassType.CLASS_A;
             EducationLevel = new List<string>();
         }
 
-        public Student(string firstName, string lastName, DateTime birthsDay, int year, SchoolClassType schoolClass, List<string> educationLevel)
+        public Student(string firstName, string lastName, DateTime birthsDay, int year, SchoolClassType schoolClass)
         {
             FirstName = firstName;
             LastName = lastName;
             BirthsDay = birthsDay;
-            Year = year;
+            SchoolYear = year;
             SchoolClass = schoolClass;
-            EducationLevel = educationLevel;
+            EducationLevel = AllEducationLevel;
         }
+
+        public readonly List<string> AllEducationLevel = new List<string> { "érettségi", "szakmai érettségi", "szakmai vizsga" };
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime BirthsDay { get; set; }
-        public int Year { get; set; }
+        public int SchoolYear { get; set; }
         public SchoolClassType SchoolClass { get; set; }
         public List<string> EducationLevel { get; set; }       
     }
