@@ -1,11 +1,13 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using StudentMVVMProjekt.Models;
-using System.Windows.Documents;
+using System.Collections.Generic;
 
 namespace StudentMVVMProjekt.ViewModels
 {
     public partial class StudentViewModel : ObservableObject
     {
+        private List<string> _educationLevel=new EducationLevels().AllEducationLevel;
+
         [ObservableProperty]
         private Student student;
 
@@ -13,7 +15,7 @@ namespace StudentMVVMProjekt.ViewModels
         private string selectedEducationLevel;
 
         [ObservableProperty]
-        private List<string> educationLevel=Student.AllEducationLevel;
+        private List<string> educationLevel;
 
         public StudentViewModel()
         {
@@ -21,10 +23,5 @@ namespace StudentMVVMProjekt.ViewModels
            selectedEducationLevel = string.Empty;
         }
 
-        public StudentViewModel(Student student)
-        {
-            this.student = student;
-            selectedEducationLevel=string.Empty;
-        }
     }
 }

@@ -6,8 +6,6 @@ namespace StudentMVVMProjekt.Models
 {
     public enum SchoolClassType { CLASS_A, CLASS_B, CLASS_C }
 
-
-
     public class Student
     {
         public Student()
@@ -30,7 +28,7 @@ namespace StudentMVVMProjekt.Models
             EducationLevel = AllEducationLevel;
         }
 
-        public static List<string> AllEducationLevel = new List<string> { "érettségi", "szakmai érettségi", "szakmai vizsga" };
+
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
