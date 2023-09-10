@@ -20,7 +20,8 @@ namespace StudentMVVMProjekt.ViewModels
         public StudentViewModel()
         {
            this.student = new Student();
-           selectedEducationLevel = string.Empty;
+           SelectedEducationLevel = string.Empty;
+           EducationLevel=_educationLevel;
         }
 
     }

@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualBasic;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace StudentMVVMProjekt.Models
@@ -15,7 +14,7 @@ namespace StudentMVVMProjekt.Models
             BirthsDay = new DateTime();
             SchoolYear = 9;
             SchoolClass = SchoolClassType.CLASS_A;
-            EducationLevel = new List<string>();
+            EducationLevel = string.Empty;
         }
 
         public Student(string firstName, string lastName, DateTime birthsDay, int year, SchoolClassType schoolClass)
@@ -25,7 +24,7 @@ namespace StudentMVVMProjekt.Models
             BirthsDay = birthsDay;
             SchoolYear = year;
             SchoolClass = schoolClass;
-            EducationLevel = AllEducationLevel;
+            EducationLevel = string.Empty;
         }
 
 
@@ -35,6 +34,6 @@ namespace StudentMVVMProjekt.Models
         public DateTime BirthsDay { get; set; }
         public int SchoolYear { get; set; }
         public SchoolClassType SchoolClass { get; set; }
-        public List<string> EducationLevel { get; set; }       
+        public string EducationLevel { get; set; }       
     }
 }
