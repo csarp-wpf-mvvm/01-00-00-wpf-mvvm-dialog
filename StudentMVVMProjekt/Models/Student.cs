@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace StudentMVVMProjekt.Models
 {
@@ -26,8 +25,6 @@ namespace StudentMVVMProjekt.Models
             SchoolClass = schoolClass;
             EducationLevel = string.Empty;
         }
-
-
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
